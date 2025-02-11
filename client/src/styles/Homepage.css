@@ -1,0 +1,150 @@
+.banner-img {
+  margin-top: 60px;
+}
+.home{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+  /* margin-left: -10px; */
+  /* margin-bottom: 2rem; */
+  /* margin-right: 5rem; */
+  align-items: center;
+  text-align: center;
+ 
+  height: 70%;
+  width: 100vw;
+  /* margin-left: 1rem;  */
+   background-color: #087385;
+
+   .banner{
+    position: relative;
+    /* width: 10vh; */
+    height: 18vh;
+    margin: 0;padding: 0;  
+    border-radius: 10px;
+     
+  }
+  .cover{
+    max-width: 70%;
+    max-height: 50%;
+    size: 70%;
+    position: relative;
+    
+     
+  }
+  
+}
+@media(max-width:500px){
+  .home{
+   margin-top: 0;
+    margin-right: 0;
+    height: 25vh;
+    margin-bottom: 5vh;
+    .banner {
+      
+       display:none;
+     
+     }
+    .banner {
+      visibility: hidden;
+     /* width: auto; */
+     }
+     
+    .cover{
+      max-width: 100%;
+      max-height: 100%;
+      /* margin-top: 0; */
+      size: 100%;
+      position: relative;
+       
+    }
+  }
+ 
+}
+
+.home-page h1 {
+  color: gray;
+  font-family: "Playfair Display", serif;
+}
+.head{
+  /* padding: 50px; */
+  margin-top: 3rem;
+}
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  .card-title{
+    font-size: 1.3rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+}
+.home-page .card {
+  background-color: rgba(128, 128, 128, 0.097);
+  width: 21rem;
+}
+.home-page .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-page .card-price {
+  color: green;
+  font-weight: bold;
+  /* size: 1cap; */
+}
+.home-page button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+}
+
+.home-page .card img:hover {
+  transform: scale(0.9);
+}
+
+.home-page .card-img-top {
+  height: 300px !important;
+}
+/* ==================
+filters
+============== */
+.filters h4 {
+  margin-top: 10px;
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 8px;
+}
+
+.ant-checkbox-wrapper {
+  margin: 2px;
+}
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.loadmore {
+  color: green;
+  font-weight: bold;
+  font-size: 20px !important;
+}

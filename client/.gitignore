@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 /public
-/src
+# /src
 package-lock.json
 package.json
 README.md
