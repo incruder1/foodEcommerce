@@ -1,18 +1,17 @@
 import express from "express";
 import {
-  brainTreePaymentController,
-  braintreeTokenController,
+ 
   createProductController,
   deleteProductController,
   getProductController,
-  getSingleProductController,
-  productCategoryController,
-  productCountController,
-  productFiltersController,
-  productListController,
-  productPhotoController,
-  realtedProductController,
-  searchProductController,
+  // getSingleProductController,
+  // productCategoryController,
+  // productCountController,
+  // productFiltersController,
+  // productListController,
+  // productPhotoController,
+  // realtedProductController,
+  // searchProductController,
   updateProductController,
 } from "../controllers/productController.js";
 import {
@@ -51,37 +50,37 @@ router.delete("/delete-product/:pid",requireSignIn, isAdmin,formidable(), delete
 
 
 
-//single product
-router.get("/get-product/:slug", getSingleProductController);
+// //single product
+// router.get("/get-product/:slug", getSingleProductController);
 
-//get photo
-router.get("/product-photo/:pid", productPhotoController);
+// //get photo
+// router.get("/product-photo/:pid", productPhotoController);
 
 
 
-//filter product
-router.post("/product-filters", productFiltersController);
+// //filter product
+// router.post("/product-filters", productFiltersController);
 
-//product count
-router.get("/product-count", productCountController);
+// //product count
+// router.get("/product-count", productCountController);
 
-//product per page
-router.get("/product-list/:page", productListController);
+// //product per page
+// router.get("/product-list/:page", productListController);
 
-//search product
-router.get("/search/:keyword", searchProductController);
+// //search product
+// router.get("/search/:keyword", searchProductController);
 
-//similar product
-router.get("/related-product/:pid/:cid", realtedProductController);
+// //similar product
+// router.get("/related-product/:pid/:cid", realtedProductController);
 
-//category wise product
-router.get("/product-category/:slug", productCategoryController);
+// //category wise product
+// router.get("/product-category/:slug", productCategoryController);
 
-//payments routes
-//token
-router.get("/braintree/token", braintreeTokenController);
+// //payments routes
+// //token
+// router.get("/braintree/token", braintreeTokenController);
 
-//payments
-router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
+// //payments
+// router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
 
 export default router;

@@ -39,14 +39,14 @@ router.get("/admin-auth", requireSignIn, isAdmin, (req, res) => {
 router.get("/manager-auth", requireSignIn, isManager, (req, res) => {
   res.status(200).send({ ok: true });
 });
-//update profile
-router.put("/profile", requireSignIn, updateProfileController);
+// //update profile
+// router.put("/profile", requireSignIn, updateProfileController);
 
-//orders
-router.get("/orders", requireSignIn, getOrdersController);
+// //orders
+// router.get("/orders", requireSignIn, getOrdersController);
 
-//all orders
-router.get("/all-orders", requireSignIn, isAdmin, getAllOrdersController);
+// //all orders
+// router.get("/all-orders", requireSignIn, isAdmin, getAllOrdersController);
 
 // order status update
 router.put(
