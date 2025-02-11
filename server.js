@@ -42,7 +42,7 @@ app.use("/api/v1/users", userRoutes);
 
 //rest api
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to CraftMYPlaye</h1>");
+  res.send("<h1>Welcome to CraftMYPlate </h1>");
 });
 
 app.use("*", function(req,res){
