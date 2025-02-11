@@ -38,16 +38,16 @@ router.post(
   createProductController
 );
 //routes
-router.put(
-  "/update-product/:pid",
-  requireSignIn,
-  adminOrManager,
-  formidable(),
-  updateProductController
+router.put("/update-product/:pid", 
+   requireSignIn,
+    //  isAdmin,
+    adminOrManager,
+    
+      formidable(),  updateProductController
 );
 
 //delete rproduct
-router.delete("/delete-product/:pid",isAdmin, deleteProductController);
+router.delete("/delete-product/:pid",requireSignIn, isAdmin,formidable(), deleteProductController);
 
 
 
