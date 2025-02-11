@@ -33,7 +33,7 @@ const HomePage = () => {
   };
 
   return (
-    <Layout title={"Shop Latest Watches"}>
+    <Layout title={"Craft My Plate"}>
       <div className="home">
         <img className="banner" src={banner1} alt="Banner" />
         <div>

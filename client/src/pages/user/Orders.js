@@ -59,7 +59,14 @@ const Orders = () => {
                         <td>{o?.status}</td>
                         <td>{moment(o?.createdAt).fromNow()}</td>
                         <td>₹{o?.totalAmount}</td>
-                        <td>{o?.items?.length}</td>
+                        <td>
+                        {o?.items && Array.isArray(o.items)
+                          ? o.items.reduce((total, item) => {
+                              
+                              return total + (item?.quantity || 0);
+                            }, 0)
+                          : 0}
+                      </td>
                       </tr>
                     </tbody>
                   </table>
