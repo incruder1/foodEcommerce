@@ -50,7 +50,7 @@ export const registerController = async (req, res) => {
 export const loginController = async (req, res) => {
   try {
     const { username, password } = req.body;
-    console.log(username, password);
+    //console.log(username, password);
     //validation
     if (!username || !password) {
       return res.status(404).send({

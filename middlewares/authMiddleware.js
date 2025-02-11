@@ -9,7 +9,7 @@ export const requireSignIn = async (req, res, next) => {
       process.env.JWT_SECRET
     );
     req.user = decode;
-    console.log("require sign done");
+    // console.log("require sign done");
     next();
   } catch (error) {
     console.log(error);
@@ -41,7 +41,7 @@ export const isAdmin = async (req, res, next) => {
         message: "Forbidden: Admin access required",
       });
     }
-    console.log("require admin done");
+    // console.log("require admin done");
 
     next();
   } catch (error) {

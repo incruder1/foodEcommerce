@@ -13,7 +13,7 @@ dotenv.config();
 // / POST /order - Place an order
 export const placeOrderController = async (req, res) => {
   try {
-    console.log(req.body);
+   // console.log(req.body);
     const { userId, items, totalAmount } = req.body;
     if (!userId || !items.length || !totalAmount) {
       return res.status(400).json({ message: "Invalid order details" });
@@ -34,12 +34,12 @@ export const placeOrderController = async (req, res) => {
 // GET /orders - Fetch orders of the logged-in user
 export const getOrdersController = async (req, res) => {
   try {
-    console.log(req.user._id);
+   // console.log(req.user._id);
     const userId = req.user._id;
     const orders = await orderModel
       .find({ userId })
       .populate("items.menuItemId");
-    console.log(orders);
+//console.log(orders);
     res.status(200).json({ success: true, orders });
   } catch (error) {
     console.error("Error fetching orders:", error);

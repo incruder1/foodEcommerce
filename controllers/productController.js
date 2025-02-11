@@ -69,7 +69,7 @@ cloudinary.v2.config({
 //get all products
 export const createProductController = async (req, res) => {
   try {
-    console.log(req.fields);
+   // console.log(req.fields);
     const { name, price, category } = req.fields;
     const { photo } = req.files;
 
@@ -202,7 +202,7 @@ export const productPhotoController = async (req, res) => {
 //delete controller
 export const deleteProductController = async (req, res) => {
   try {
-    console.log(req.params.pid);
+   // console.log(req.params.pid);
     await productModel.findByIdAndDelete(req.params.pid);
     res.status(200).send({
       success: true,
@@ -309,9 +309,9 @@ export const deleteProductController = async (req, res) => {
 
 export const updateProductController = async (req, res) => {
   try {
-    console.log("Received update request...");
-    console.log("Fields:", req.fields);
-    console.log("Files:", req.files);
+    //console.log("Received update request...");
+    // console.log("Fields:", req.fields);
+    // console.log("Files:", req.files);
 
     const { name, price, category, availability } = req.fields;
 
